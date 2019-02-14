@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <!-- Importer le fichier head.ejs -->
+        <% include ./components/head.ejs %>
+
+        <title>My Todo list</title>
+    </head>
+    <body>
+        <% include ./components/header.ejs %>
+
+        <main>
+            
+            <!-- Afficher les données de la route -->
+            <ul>
+                <!-- Boucle EJS -->
+                <% for( let item of data ) { %>
+                    <li
+                        <% if(item.isDone) { %>
+                        class="isDone"
+                        <% } %>
+                    > 
+                        <%= item.content %> 
+                    </li>
+                <% } %>
+            </ul>
+
+        </main>
+
+        <% include ./components/footer.ejs %>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+        <script src="./js/app.js"></script>
+    </body>
+</html>

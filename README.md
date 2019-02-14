@@ -14,4 +14,4 @@ Mise en place d'une application de chat (chatbot)
 ## Configuration des vues client 
 - Définir le moteur de rendu en ejs 
 - Définir un dossier "www" comme étant le dossier client
-- Créer un fichier "index.html" dans le dossier "www"
+- Créer un fichier "index.ejs" dans le dossier "www"
